@@ -12,6 +12,8 @@ una solución económicamente viable para la fase inicial del proyecto.
 
 ## 3. Estrategia de Despliegue y Comunicación
 
+### 3.1 Protocolo de Transferencia de Ficheros
+
 Para el despliegue de la aplicación en el servidor de producción se
 utilizará **SFTP (SSH File Transfer Protocol)**, que opera sobre el
 puerto 22 y cifra tanto las credenciales de acceso como los datos
@@ -26,7 +28,7 @@ El flujo de despliegue sobre AWS será el siguiente:
 2. Se transfieren los ficheros actualizados al directorio de la
    aplicación en el servidor.
 3. Se reinicia el servicio mediante SSH con el comando
-   `systemctl restart [ServiorAWS]`.
+   `systemctl restart [ServicioAWS]`.
 
 Como alternativa complementaria, se valorará el uso de **AWS CodeDeploy**
 para automatizar el proceso de despliegue desde el repositorio de GitHub,
@@ -44,7 +46,7 @@ del equipo sin necesidad de revisar el servidor manualmente.
 ## 4. Justificación Científica
 
 El uso de infraestructura cloud basada en AWS ha sido ampliamente
-analizado en la literatura académica reciente. Según *Ahuja, S. P., Czarnecki, E., & Willison, S. (2020)*,
+analizado en la literatura académica reciente. Según *Gudelli (2023)*,
 las instancias EC2 ofrecen una relación coste-rendimiento superior a los
 servidores físicos tradicionales en entornos de desarrollo web, destacando
 especialmente su capacidad de escalado automático ante picos de demanda.
@@ -54,5 +56,7 @@ disponibilidad y control de costes desde las fases iniciales.
 
 ## Referencias
 
-[1] Ahuja, S. P., Czarnecki, E., & Willison, S. (2020). Multi-factor performance comparison of amazon web services elastic compute cluster and google cloud platform compute engine. International Journal of Cloud Applications and Computing (IJCAC), 10(3), 1-16.
+[1] V. R. Gudelli, "AI-powered insights for performance optimization in AWS 
+cloud environments," *International Journal of Scientific Research and 
+Applications*, vol. 10, no. 2, 2023.
 
